@@ -1,0 +1,150 @@
+
+
+--------------Java 9-------------------------
+Java 9 REPL (JShell)
+
+Factory Methods for Immutable List, Set, Map and Map.Entry (List.of())
+	Java 9 Factory Methods for Immutable List:
+		List immutableList = List.of();
+		List immutableList = List.of("one","two","three");
+	Java 9 Factory Methods for Immutable Set
+	Java 9 Factory Methods for Immutable Map and Map.Entry
+
+
+Private methods in Interfaces:
+	In Java 8, we can provide method implementation in Interfaces using Default and Static methods. 
+	From Java SE 9 onwards, we can write private and private static methods too in an interface.
+	These private methods are like other class private methods only, there is no difference between them.
+	
+	private Long createCardID(){
+    // Method implementation goes here.
+  }
+
+  private static void displayCardDetails(){
+    // Method implementation goes here.
+  }
+	
+Java 9 Module System
+
+Process API Improvements:
+	Two new interfcase in Process API:
+		java.lang.ProcessHandle
+		java.lang.ProcessHandle.Info
+		
+Try With Resources Improvement
+	Feature	Before Java 9	Java 9 onwards
+	Resource Declaration	Within try block only	Can be outside try block if effectively final
+
+CompletableFuture API Improvements
+	Added some delays and timeouts, some utility methods and better sub-classing.
+		Executor exe = CompletableFuture.delayedExecutor(50L, TimeUnit.SECONDS); 
+		#Here delayedExecutor() is a static utility method used to return a new 
+		Executor that submits a task to the default executor after the given delay.
+	
+Reactive Streams
+	Java SE 9 has introduced the following API to develop Reactive Streams in Java-based applications.
+		java.util.concurrent.Flow
+		java.util.concurrent.Flow.Publisher
+		java.util.concurrent.Flow.Subscriber
+		java.util.concurrent.Flow.Processor
+
+Diamond Operator for Anonymous Inner Class
+	List<Integer> numbers = new ArrayList<>();
+	numbers.sort(new Comparator<>() { #Writing <> with Comparator<> in this line was not possible in java 8
+    @Override
+    public int compare(Integer n1, Integer n2) {
+        return n1 - n2;
+    }
+	});
+
+Optional Class Improvements
+	Stream<Optional> emp = getEmployee(id)
+	Stream empStream = emp.flatMap(Optional::stream)
+	Here Optional.stream() method is used to convert a Stream of Optional of Employee object 
+	into a Stream of Employee so that we can work on this result lazily in the result code. 
+
+Stream API Improvements
+	Stream api improvement.Methods like dropWhile and takeWhile methods added.
+	Let us discuss the takeWhile utility method here. This takeWhile() takes a predicate 
+	as an argument and returns a Stream of the subset of the given Stream values until 
+	that Predicate returns false for the first time. If the first value does NOT satisfy 
+	that Predicate, it just returns an empty Stream.
+	jshell> Stream.of(1,2,3,4,5,6,7,8,9,10).takeWhile(i -> i < 5 )
+                 .forEach(System.out::println);
+	output:
+	1
+	2
+	3
+	4
+
+Enhanced @Deprecated annotation
+	They have add two methods to this Deprecated interface: forRemoval and since to serve 
+	this information.
+
+HTTP 2 Client
+	This client supports both HTTP/1.1 and HTTP/2 protocols. It supports both Synchronous 
+	(Blocking Mode) and Asynchronous Modes. It supports Asynchronous Mode using the WebSocket API. 
+
+Multi-Resolution Image API
+Miscellaneous Java 9 Features
+
+---------------Java 11------------------------
+Strings:
+	String join() - Java 8:
+		List<String> words = Arrays.asList(new String[]{"Hello", "World", "2019"});
+		String msg = String.join(" ", words);
+		System.out.println(msg);
+	
+	chars - Java 8:
+		String s = "abc";
+		s.chars().forEach(x -> System.out.println(x));
+	
+	codePoints - Jav 9:
+		String s = "abc";
+		s.codePoints().forEach(x -> System.out.println(x));
+	
+	isBlank() - Java 11:
+		String s = "abc";
+		System.out.println(s.isBlank());
+		s = "";
+		System.out.println(s.isBlank());
+	
+	lines() - Java 11:
+		String s1 = "Hi\nHello\rHowdy";
+		System.out.println(s1);
+		List lines = s1.lines().collect(Collectors.toList());
+		System.out.println(lines);
+	
+	strip() - Java 11:
+		strip():, 
+			String s2 = "  Java,  \tPython\t ";
+			System.out.println("#" + s2 + "#");
+			System.out.println("#" + s2.strip() + "#");
+		
+		stripLeading():
+			System.out.println("#" + s2.stripLeading() + "#");
+		
+		stripTrailing():
+			System.out.println("#" + s2.stripTrailing() + "#");
+	
+	repeat() - Java 11:
+		String s3 = "Hello\n";
+		System.out.println(s3.repeat(3));
+		s3 = "Co";
+		System.out.println(s3.repeat(2));
+		
+------------------------------------------------
+Some of the important Java 11 features are:
+
+Running Java File with single command
+New utility methods in String class
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+JEP 321: HTTP Client
+Reading/Writing Strings to and from the Files
+JEP 328: Flight Recorder
+-------------------------------------------------
+		
+
+	
+	
