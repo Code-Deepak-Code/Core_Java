@@ -1,0 +1,17 @@
+OOPs Concept
+Comparable vs Comparater
+Cloning
+interface vs abstract class
+indepth knowledge on final
+-----------------------------
+Design Patterns - Singleton is most important, Apart from this 
+Factory, Abstract factory etc.
+-----------------------------
+Collections
+-----------------------------
+Java 8 till Java 11 new features.
+-----------------------------
+Lambdas & Streams & Optional
+-----------------------------
+Springboot features
+-----------------------------
