@@ -5,7 +5,19 @@ What are the six ways to use this keyword?
 Why is multiple inheritance not supported in Java?
 Why use aggregation?
 Can we override the static method?
+
 What is the covariant return type?
+	class Animal {
+			public Animal getFriend() { ... }
+	}
+
+	class Dog extends Animal {
+			@Override
+			public Dog getFriend() { ... } // Covariant return type!
+	}
+
+	Overriding method is return type is different from the parent method.
+
 What are the three usages of Java super keyword?
 Why use instance initializer block?
 What is the usage of a blank final variable?
