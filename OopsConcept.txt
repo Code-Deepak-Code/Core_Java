@@ -1,0 +1,45 @@
+-----------Association - Aggregation - Composition--------------
+Association:
+	Association represents the relationship between the objects. 
+	Types:
+		One to One
+		One to Many
+		Many to One, and
+		Many to Many
+
+Aggregation:
+	Aggregation is a way to achieve Association.
+	It is another way (aprt from inheritance) to reuse objects.
+	represents the relationship where one object contains other objects as a part of its state.
+	It represents the "weak relationship between objects".
+
+Composition:
+	Composition is also a way to achieve Association.
+	Similar to Aggregation composition also represents the relationship where one object contains
+	other objects as a part of its state. But there is a "strong relationship between the containing
+	object and the dependent object". 
+	It is the state where containing objects do not have an independent
+	existence. If you delete the parent object, all the child objects will be deleted automatically.
+------------Coupling - Cohesion----------------------
+Coupling:
+	Refers to the degree of interdependency between modules (classes, packages, systems).
+
+Cohesion:
+	Represents the strength of the relationship between elements within a single module.
+
+The java.io package is a highly cohesive package because it has I/O related classes and interface.
+However, the java.util package is a weakly cohesive or loosely coupled package because it has unrelated classes and interfaces.
+-------------Abstraction - Encapsulation-------------------------------
+Abstraction:
+	Focuses on hiding complexity and exposing essential details.
+	
+Encapsulation:
+	Focuses on bundling data and related methods within a single unit (class).
+--------------
+Object
+Class
+Inheritance
+Polymorphism
+--------------
+
+
