@@ -1,4 +1,21 @@
+--------------Java 8-------------------------
+forEach() method in Iterable interface
+default and static methods in Interfaces
+Functional Interfaces and Lambda Expressions
+Java Stream API for Bulk Data Operations on Collections
 
+Optional
+	Optional.of()
+	Optional.empty()
+	isPresent() vs ifPresent()
+	orElse() and orElseGet()
+	Optional.map and Optional.flatMap
+	filter()
+	
+Java Time API
+Collection API improvements
+Concurrency API improvements
+Java IO improvements
 
 --------------Java 9-------------------------
 Java 9 REPL (JShell)
@@ -88,7 +105,45 @@ HTTP 2 Client
 Multi-Resolution Image API
 Miscellaneous Java 9 Features
 
+---------------Java 10------------------------
+local-variable-type-inference
+	var message = "Hello, Java 10"; #We don’t provide the data type of message. 
+	Instead, we mark the message as a var, and the compiler infers the type of 
+	message from the type of the initializer present on the right-hand side.
+
+Unmodifiable Collections
+	 List<Integer> evenList = someIntList.stream()
+      .filter(i -> i % 2 == 0)
+      .collect(Collectors.toUnmodifiableList());
+		#Any attempt to modify such a collection would result in 
+		java.lang.UnsupportedOperationExceptionruntime exception.
+
+Optional*.orElseThrow()
+	Integer firstEven = someIntList.stream()
+      .filter(i -> i % 2 == 0)
+      .findFirst()
+      .orElseThrow();
+	orElseThrow() doesn’t take any argument and throws NoSuchElementExceptionif no value is present:
+	**It’s synonymous with and is now the preferred alternative to the existing get()method.**
+
+Miscellaneous:
+	Performance Improvements
+	Container Awareness
+	Root Certificates
+
 ---------------Java 11------------------------
+Some of the important Java 11 features are:
+
+Running Java File with single command
+New utility methods in String class
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+JEP 321: HTTP Client
+Reading/Writing Strings to and from the Files
+JEP 328: Flight Recorder
+
+-----------------String realted Java 8 to Java 9------------------
+
 Strings:
 	String join() - Java 8:
 		List<String> words = Arrays.asList(new String[]{"Hello", "World", "2019"});
@@ -132,18 +187,7 @@ Strings:
 		System.out.println(s3.repeat(3));
 		s3 = "Co";
 		System.out.println(s3.repeat(2));
-		
-------------------------------------------------
-Some of the important Java 11 features are:
-
-Running Java File with single command
-New utility methods in String class
-Local-Variable Syntax for Lambda Parameters
-Nested Based Access Control
-JEP 321: HTTP Client
-Reading/Writing Strings to and from the Files
-JEP 328: Flight Recorder
--------------------------------------------------
+--------------------------------------------------------
 		
 
 	
