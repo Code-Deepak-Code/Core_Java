@@ -1,0 +1,32 @@
+class Singleton {
+	// private static member to hold the single instance
+	private static Singleton instance;
+	
+	//private method
+	private Singleton()
+			{
+					System.out.println("Singleton is Instantiated.");
+			}
+	
+	//getInstance public static method
+	public static Singleton getInstance()
+    {
+        if (instance == null)
+            instance = new Singleton();
+        return instance;
+    }
+		
+	//do something method
+	public static void doSomething()
+    {
+        System.out.println("Somethong is Done.");
+    }
+
+}
+
+class GFG {
+    public static void main(String[] args)
+    {
+        Singleton.getInstance().doSomething();
+    }
+}
