@@ -1,0 +1,62 @@
+Strings:
+	String join() - Java 8:
+		List<String> words = Arrays.asList(new String[]{"Hello", "World", "2019"});
+		String msg = String.join(" ", words);
+		System.out.println(msg);
+	
+	chars - Java 8:
+		String s = "abc";
+		s.chars().forEach(x -> System.out.println(x));
+	
+	codePoints - Jav 9:
+		String s = "abc";
+		s.codePoints().forEach(x -> System.out.println(x));
+	
+	isBlank() - Java 11:
+		String s = "abc";
+		System.out.println(s.isBlank());
+		s = "";
+		System.out.println(s.isBlank());
+	
+	lines() - Java 11:
+		String s1 = "Hi\nHello\rHowdy";
+		System.out.println(s1);
+		List lines = s1.lines().collect(Collectors.toList());
+		System.out.println(lines);
+	
+	strip() - Java 11:
+		strip():, 
+			String s2 = "  Java,  \tPython\t ";
+			System.out.println("#" + s2 + "#");
+			System.out.println("#" + s2.strip() + "#");
+		
+		stripLeading():
+			System.out.println("#" + s2.stripLeading() + "#");
+		
+		stripTrailing():
+			System.out.println("#" + s2.stripTrailing() + "#");
+	
+	repeat() - Java 11:
+		String s3 = "Hello\n";
+		System.out.println(s3.repeat(3));
+		s3 = "Co";
+		System.out.println(s3.repeat(2));
+		
+------------------------------------------------
+Some of the important Java 11 features are:
+
+Running Java File with single command
+New utility methods in String class
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+JEP 321: HTTP Client
+Reading/Writing Strings to and from the Files
+JEP 328: Flight Recorder
+-------------------------------------------------
+		
+	
+	
+	
+	
+	
+	
