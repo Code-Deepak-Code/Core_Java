@@ -1,8 +1,13 @@
 OOPs Concept
+SOLID design priciple
 Comparable vs Comparater
-Cloning
+Cloning - Check Deep vs Shallow copy.txt
 interface vs abstract class
 indepth knowledge on final
+can abstract class be instantiated?
+why abstract class have constructor, if there's no need or can't be instantiated?
+Why interfaced don't have or need a construcer?
+A very good indepth understanding of final keyword.
 -----------------------------
 Design Patterns - Singleton is most important, Apart from this 
 Factory, Abstract factory etc.
@@ -15,3 +20,74 @@ Lambdas & Streams & Optional
 -----------------------------
 Springboot features
 -----------------------------
+
+SOLID Design Principel:
+For rest (SOLI) check GD.
+D:
+	The Dependency Inversion Principle (DIP) is one of the five SOLID principles of software design, advocating for loose coupling and code flexibility. It states:
+
+	High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
+
+	This means:
+		High-level modules: Modules performing complex tasks and coordinating lower-level ones.
+		Low-level modules: Modules implementing specific functionalities used by high-level modules.
+		Abstractions: Interfaces or abstract classes defining the general operations needed by modules, without specifying implementation details.
+		Details: Concrete implementations of functionalities provided by low-level modules.
+		
+-----------------------------
+interface vs abstract class:
+
+Main difference which will make other points self understood:
+	Abstract class have all the features of a normal java class except that we can’t instantiate it. 
+	We can use abstract keyword to make a class abstract but interfaces are a completely different type 
+	and can have only public static final constants and method declarations.
+
+abstract keyword is used to create an abstract class and it can be used with methods also whereas interface keyword is used to create interface and it can’t be used with methods.
+
+Subclasses use extends keyword to extend an abstract class and they need to provide implementation of all the declared methods in the abstract class unless the subclass is also an abstract class whereas subclasses use implements keyword to implement interfaces and should provide implementation for all the methods declared in the interface.
+
+Some other differences:
+	Abstract classes can have methods with implementation whereas interface provides absolute abstraction and can’t have any method implementations. Note that from Java 8 onwards, we can create default and static methods in interface that contains the method implementations.
+
+	Abstract classes can have constructors but interfaces can’t have constructors.
+
+	Abstract class have all the features of a normal java class except that we can’t instantiate it. We can use abstract keyword to make a class abstract but interfaces are a completely different type and can have only public static final constants and method declarations.
+
+	Abstract classes methods can have access modifiers as public, private, protected, static but interface methods are implicitly public and abstract, we can’t use any other access modifiers with interface methods.
+
+	A subclass can extend only one abstract class but it can implement multiple interfaces.
+
+	Abstract classes can extend other class and implement interfaces but interface can only extend other interfaces.
+
+	We can run an abstract class if it has main() method but we can’t run an interface because they can’t have main method implementation.
+
+	Interfaces are used to define contract for the subclasses whereas abstract class also define contract but it can provide other methods implementations for subclasses to use.
+----------
+can abstract class be instantiated?
+No, abstract classes cannot be instantiated. An abstract class is a class that is declared abstract, but it may or may not include abstract methods. 
+Abstract classes can be subclassed, but they cannot be instantiated directly. This is because they contain abstract methods that do not have an implementation. However, an instance of a subclass that extends the abstract class and provides an implementation for the abstract methods can be created. 
+----------
+why abstract class have constructor, if there's no need or can't be instantiated?
+Abstract classes have constructors because they need to initialize instance variables and non-abstract methods.
+
+Here's some more information about abstract classes and constructors:
+Purpose: The main purpose of a constructor is to construct an object. But before constructing an object it will initilze all the 
+variables (instance) which are declared inside the constructer for inilization with our choosed values or for initializing with 
+default values. Default values will be initilzed through default constructer.
+
+Interfaces: An interface contains only constant variables, so they are already initialized. Therefore, an interface does not need a constructor
+
+More insights on this topics:
+	Initialization: In Java, a constructor initializes fields.
+
+	Subclasses: When you instantiate two different subclasses of an abstract class, their constructors are called first. Then, the parent constructor is called and the fields are initialized.
+
+	Default constructor: If you don't do anything, the default constructor of the parent will be called. You can use the super keyword to invoke a specific constructor on the parent class.
+
+	Variables: An abstract class can have variables of all access modifiers, so they have to be initialized to default values.
+----------
+Why interfaced don't have or need a construcer?
+
+Constructer's main purpose is to initialize a variable and create an object.
+An interface contains only constant variables, so they are already initialized. Therefore, an interface does not need a constructor
+----------

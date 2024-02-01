@@ -1,0 +1,71 @@
+1. Pizza interface:
+	public interface Pizza {
+			void prepare();
+			void bake();
+			void cut();
+			void box();
+	}
+
+2. Concrete Pizza classes:
+	public class MargheritaPizza implements Pizza {
+			@Override
+			public void prepare() {
+					System.out.println("Preparing Margherita pizza with tomato sauce, mozzarella, and basil...");
+			}
+			// ... other pizza methods
+	}
+
+public class PepperoniPizza implements Pizza {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing Pepperoni pizza with tomato sauce, mozzarella, pepperoni, and oregano...");
+    }
+    // ... other pizza methods
+}
+
+3. PizzaFactory class:
+	public class PizzaFactory {
+			public Pizza createPizza(String type) {
+					Pizza pizza = null;
+					if (type.equals("margherita")) {
+							pizza = new MargheritaPizza();
+					} else if (type.equals("pepperoni")) {
+							pizza = new PepperoniPizza();
+					}
+					return pizza;
+			}
+	}
+
+4. Client code (Order class):
+	public class Order {
+			private PizzaFactory pizzaFactory;
+
+			public Order(PizzaFactory pizzaFactory) {
+					this.pizzaFactory = pizzaFactory;
+			}
+
+			public void orderPizza(String type) {
+					Pizza pizza = pizzaFactory.createPizza(type);
+
+					if (pizza != null) {
+							pizza.prepare();
+							pizza.bake();
+							pizza.cut();
+							pizza.box();
+							System.out.println("Your " + pizza.getClass().getSimpleName() + " is ready!");
+					} else {
+							System.out.println("Sorry, pizza type not available.");
+					}
+			}
+	}
+
+5. Main class to run the example:
+	public class Main {
+			public static void main(String[] args) {
+					PizzaFactory pizzaFactory = new PizzaFactory();
+					Order order = new Order(pizzaFactory);
+
+					order.orderPizza("margherita");
+					order.orderPizza("pepperoni");
+			}
+	}

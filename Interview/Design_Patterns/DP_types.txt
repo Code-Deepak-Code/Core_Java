@@ -1,0 +1,27 @@
+Creational Patterns:
+
+	Singleton: Ensures only one instance of a class exists, providing a global access point. Often used for configuration settings or logging services.
+	
+	Factory: Creates objects without exposing their creation logic, allowing for flexible implementation changes. Think of it as a "factory" producing different types of objects based on your needs.
+	
+	Builder: Builds complex objects step-by-step, improving readability and avoiding long constructor parameters. Imagine meticulously assembling a car by choosing individual parts instead of throwing everything together in one go.
+	
+	Prototype: Creates new objects by copying existing ones, simplifying initialization and avoiding redundant data creation. Like using a cookie cutter to make identical shapes from dough.
+
+Structural Patterns:
+
+	Adapter: Makes incompatible interfaces work together by translating between them. Think of it as a bridge or translator facilitating communication between two parties speaking different languages.
+	
+	Facade: Provides a simplified interface to a complex system, hiding its internal details. Imagine a single button to activate various features in a car instead of dealing with dozens of individual switches.
+	
+	Decorator: Dynamically adds behavior to an object without changing its class. Like layering accessories on top of an outfit to enhance its functionality or appearance.
+	
+	Proxy: Provides controlled access to another object, adding security or caching functionality. Think of a receptionist taking messages for an important person, filtering who can get through.
+
+Behavioral Patterns:
+
+	Observer: Notifies multiple objects about changes in another object. Imagine a news channel automatically sending updates to subscribed news apps as events unfold.
+	
+	Strategy: Lets an algorithm vary independently from clients who use it. Like choosing different cooking methods for various dishes based on the desired outcomes.
+	
+	Template Method: Defines the skeleton of an algorithm in a superclass, allowing subclasses to customize specific steps. Think of a recipe template with optional variations for ingredients and cooking times.
