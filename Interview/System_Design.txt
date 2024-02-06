@@ -1,0 +1,16 @@
+How to improve request if we have more write http requests than read one?
+
+(
+For read one we can use, cache (inmemory such as caffeine, redis etc.) distributed (such as redis, memcached etc.) or no sql database.
+for search we can use elastic serach which has the highest and fastest data read rate.
+)
+
+In programming level:
+pagination
+entity graph
+multithreading
+
+spring batch - if want to insert or update 10s of thousands of data in one shot.
+On database level:
+indexing
+query optimizing

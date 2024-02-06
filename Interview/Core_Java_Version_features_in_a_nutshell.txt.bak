@@ -20,7 +20,8 @@ Java IO improvements
 Some Streams tricky questions:
 gropingBy method:
 
-
+RestTemplate & WebClient
+Brushup on all small-big springboot annotations
 --------------Java 9-------------------------
 Java 9 REPL (JShell)
 

@@ -1,0 +1,4 @@
+Agile Methodology
+Scrum framework in detail
+Little bit about Kanban
+Scrum vs Kanban vs Agile.
