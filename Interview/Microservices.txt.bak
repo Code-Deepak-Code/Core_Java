@@ -1,0 +1,11 @@
+Microservices Design Patterns
+Circuti Breaker (Resilience4j), Logging, Distributed Tracing (Zipkin), Observability (Prometheus + Graphana)
+CQRS, SAGA, Transactionl Outbox Patterns
+
+How to handle security in microservices?
+Using Keycloak
+
+Which rest client we use to cal microservices?
+RestTemplate
+
+
