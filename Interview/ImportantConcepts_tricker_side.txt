@@ -1,3 +1,9 @@
+## Note: Dont' override this part. If you want to write an answer then mentiond the question here as a content (at a glance view) and then again go to the line after ----- and then mention your question ## following by it answer. Just in case if you're not able to find the answer for the question mentioned in the overview section, do copy of the question from overview and use find (ctrl + f) to find the 
+## next occurance. As both the questiosn are copy paste of each other, it'll find quickly. The idea is to give a medium by which we can just go through the entire topic or imporatnt questions in one shot
+## at the time of an interview. There's no need to scroll throught the entire page, just to get the overview and know if am missign something. While getting an overview from the content overviwe section,
+## just try to answer every question (especially for some odd or new or long time ago gone through topics) in your mind. Keep on adding these lists with all the important or new questions which you come
+## across during your interviews
+
 Can we overload the main method?
 A Java Constructor returns a value but, what?
 Can we create a program without main method?
@@ -5,6 +11,21 @@ What are the six ways to use this keyword?
 Why is multiple inheritance not supported in Java?
 Why use aggregation?
 Can we override the static method?
+Difference between normal Java class and enum?
+What is the covariant return type?
+What are the three usages of Java super keyword?
+Why use instance initializer block?
+What is the usage of a blank final variable?
+What is a marker or tagged interface?
+What is runtime polymorphism or dynamic method dispatch?
+What is the difference between static and dynamic binding?
+How downcasting is possible in Java?
+What is the purpose of a private constructor?
+What is object cloning?
+
+---------------------------------------------------------------------
+Difference between normal Java class and enum?
+An enum can, just like a class , have attributes and methods. The only difference is that enum constants are public , static and final (unchangeable - cannot be overridden).
 
 What is the covariant return type?
 	class Animal {
@@ -18,12 +39,3 @@ What is the covariant return type?
 
 	Overriding method is return type is different from the parent method.
 
-What are the three usages of Java super keyword?
-Why use instance initializer block?
-What is the usage of a blank final variable?
-What is a marker or tagged interface?
-What is runtime polymorphism or dynamic method dispatch?
-What is the difference between static and dynamic binding?
-How downcasting is possible in Java?
-What is the purpose of a private constructor?
-What is object cloning?

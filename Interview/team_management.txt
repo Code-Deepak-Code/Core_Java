@@ -2,3 +2,8 @@ Agile Methodology
 Scrum framework in detail
 Little bit about Kanban
 Scrum vs Kanban vs Agile.
+
+
+What is Agile Manifesto?
+It outlines 4 values and 12 principles.
+https://www.atlassian.com/agile/manifesto

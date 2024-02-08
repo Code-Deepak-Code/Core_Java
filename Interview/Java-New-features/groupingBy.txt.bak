@@ -1,0 +1,31 @@
+
+class BlogPost {
+    String title;
+    String author;
+    BlogPostType type;
+    int likes;
+}
+
+enum BlogPostType {
+    NEWS,
+    REVIEW,
+    GUIDE
+}
+
+class Tuple {
+    BlogPostType type;
+    String author;
+}
+
+Map<BlogPostType, List<BlogPost>> postsPerType = posts.stream()
+  .collect(groupingBy(BlogPost::getType));
+
+--------------------------------------------------------------------------------
+class Employee {
+	Long id;
+	Stirng name;
+	Bigdecimal salary;
+}
+
+Map<salary, List<Employee>> =
+employeeList.stream.collect(groupingBy(Employee::getSalary))
