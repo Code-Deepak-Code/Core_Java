@@ -1,0 +1,55 @@
+Scrum in bit detail:
+
+Scrum is a widely used framework for agile software development. It provides a structured yet flexible approach to managing complex projects, primarily in the software development domain. Here's a detailed explanation of Scrum:
+
+Core Concepts:
+Roles:
+
+Product Owner: Represents the stakeholders and ensures that the development team builds the right product features.
+Scrum Master: Facilitates the Scrum process, removes impediments, and helps the team adhere to Scrum principles.
+Development Team: Cross-functional group responsible for delivering the product increment.
+Artifacts:
+
+Product Backlog: Prioritized list of all desired features and enhancements for the product.
+Sprint Backlog: Subset of the Product Backlog items selected for implementation during a Sprint.
+Increment: The sum of all the completed Product Backlog items at the end of a Sprint.
+Events:
+
+Sprint: Time-boxed period (usually 2-4 weeks) during which a potentially shippable product increment is created.
+Sprint Planning: Meeting where the Scrum Team plans the work to be completed during the upcoming Sprint.
+Daily Stand-up: Brief daily meeting where team members discuss progress, plans, and any impediments.
+Sprint Review: Meeting at the end of a Sprint where the team demonstrates the completed work to stakeholders.
+Sprint Retrospective: Meeting at the end of a Sprint where the team reflects on its processes and identifies improvements.
+Workflow:
+Product Backlog Refinement:
+
+The Product Owner continuously refines and prioritizes the Product Backlog based on feedback and changing requirements.
+Sprint Planning:
+
+The Product Owner and Development Team collaborate to select items from the Product Backlog for the upcoming Sprint.
+The team breaks down selected items into tasks and estimates effort.
+Sprint Execution:
+
+The Development Team works on tasks from the Sprint Backlog to deliver the Sprint goal.
+Daily Stand-ups are held to synchronize activities and identify any obstacles.
+Sprint Review:
+
+The team presents the completed work to stakeholders.
+Feedback is gathered, and the Product Backlog may be adjusted based on this input.
+Sprint Retrospective:
+
+The team reflects on the Sprint process, discussing what went well, what could be improved, and how to implement those improvements in the next Sprint.
+Principles:
+Empirical Process Control:
+
+Scrum is based on the three pillars of transparency, inspection, and adaptation. The process is continuously evaluated and adjusted based on empirical evidence.
+Self-Organization:
+
+Development teams are empowered to organize themselves and decide how to accomplish their work.
+Iterative and Incremental:
+
+Development is done in short, iterative cycles (Sprints), delivering a potentially shippable product increment at the end of each Sprint.
+Collaboration:
+
+Scrum emphasizes collaboration between stakeholders, customers, and the development team throughout the project.
+Overall, Scrum promotes flexibility, adaptability, and collaboration, enabling teams to deliver high-quality products efficiently in a constantly changing environment.
