@@ -1,2 +1,153 @@
+Can you explain @Springbootapplication annotation
+It is an alias for three annotations: EnableAutoConfiguration + ComponentScan + Configuration.
 RestTemplate & WebClient
 Brushup on all small-big springboot annotations
+can you explain about connection pooling in springboot
+Some of the springboot annotation which we don't really use in day to day.
+Explain @Scope annotation.
+what is the default scope of @Componenet, @Service, @Controller and @Repository?
+How can we modify the default scope of @Componenet, @Service, @Controller and @Repository annotations?
+What is the use of @Lazy, @Value, @PropertySource, @ConfigurationProperties annotations?
+what is the difference between @PropertySource vs @ConfigurationProperties?
+what is meant by beans with nested structures?
+
+
+  
+
+------------------------------------------------------------------------------------
+can you explain about connection pooling in springboot
+Advantage:
+Reducing connection overhead: Establishing a connection to a database can be expensive. Reusing existing connections from the pool avoids this overhead.
+Limiting the number of concurrent connections: Databases usually have limits on the number of simultaneous connections. Pooling prevents exceeding these limits.
+Improving overall application responsiveness: Faster database interactions translate to faster overall application performance.
+
+Spring Boot supports connection pooling automatically, making it easy to configure and use. Here's a breakdown:
+
+Spring Boot defaults to HikariCP, a high-performance and robust connection pool implementation, unless other options are explicitly chosen.
+Other cp services:
+Tomcat JDBC Connection Pool
+Apache Commons DBCP2:
+C3P0
+
+Configuration:
+Spring Boot auto-configures the chosen connection pool based on available dependencies.
+You can further customize pool settings through application properties (e.g., spring.datasource.hikari.maximumPoolSize) or annotations like @ConfigurationProperties.
+
+Some of the springboot annotation which we don't really use in day to day.
+
+Explain @Scope annotation.
+Example of @Scope Annotation in Spring Boot:
+The @Scope annotation in Spring Boot controls the lifespan of beans managed by Spring. Here's an example using different scopes:
+1. Scopes Available:
+@Scope("singleton"): The bean has a single instance throughout the application lifetime. (Default for Spring Boot beans)
+@Scope("prototype"): A new instance of the bean is created for each injection point.
+@Scope("session"): The bean instance is bound to the user's HTTP session (requires web environment).
+@Scope("request"): The bean instance is bound to the current HTTP request (requires web environment).
+
+2. Example Scenario:
+Imagine you have a shopping cart service:
+ShoppingCart could be @Scope("session") to maintain items across user sessions.
+CartItem could be @Scope("prototype") to create separate instances for each item in the cart.
+A service like CheckoutService would likely remain @Scope("singleton") for efficient management.
+
+3. Code Example:
+@Component
+public class ShoppingCart {
+
+    // List of cart items
+
+    @Scope("prototype")
+    public void addItem(Item item) {
+        // Add item to cart
+    }
+}
+
+@Component
+@Scope("prototype")
+public class Item {
+
+    // Item details
+
+}
+
+@Service
+public class CheckoutService {
+
+    @Autowired
+    private ShoppingCart cart;
+
+    public void checkout() {
+        // Process checkout using shopping cart
+    }
+}
+
+Explanation:
+ShoppingCart maintains user's cart items across sessions, hence @Scope("session").
+Each Item in the cart gets its own instance due to @Scope("prototype").
+CheckoutService remains a singleton for efficient resource management.
+
+Benefits:
+Memory optimization: Scopes like prototype prevent unnecessary object creation.
+Session management: Maintain user-specific state with @Scope("session").
+Flexibility: Tailor bean lifecycles to your application's needs.
+
+Remember:
+Choose the appropriate scope based on your bean's usage and resource requirements.
+Overusing @Scope("prototype") can increase memory usage.
+Combine scopes effectively for optimal performance and maintainability.
+
+what is the default scope of @Componenet, @Service, @Controller and @Repository?
+All annotations you mentioned (@Component, @Service, @Controller, and @Repository) by default have the same scope, which is singleton. 
+
+How can we modify the default scope of @Componenet, @Service, @Controller and @Repository annotations?
+We can override the defatult singleton of these annotations by using @scope annotation.
+For example @Scope("prototype"), put it on top of the class besides these annotations.
+
+What is the use of @Lazy, @Value, @PropertySource, @ConfigurationProperties annotations?
+@Lazy: 
+Purpose: Delays the initialization of a Spring bean until it's first accessed.
+
+@Value:
+Purpose: Injects property values directly into fields or setter methods of a Spring
+
+@PropertySource:
+Purpose: Specifies the location of properties files used for injection with annotations like @Value, @ConfigurationProperties, or environment variables.
+
+@ConfigurationProperties:
+Purpose: Enables binding externalized properties (from files or environment variables) to a bean with nested structures.
+Use cases:
+Configuring complex beans with hierarchical property structures.
+Simplifying complex configuration management with type safety and validation.
+Features:
+Supports nesting, collections, and custom conversion expressions.
+Provides validation annotations for data integrity.
+
+what is the difference between @PropertySource vs @ConfigurationProperties?
+@ConfigurationProperties(prefix = "my.app")
+class MyConfig {
+
+    private String name;
+    private int age;
+
+    // Getters and setters with validation annotations
+}
+Key Differences:
+Functionality: @PropertySource simply loads properties, while @ConfigurationProperties binds them to bean structures.
+Target: @PropertySource applies to files/directories, while @ConfigurationProperties affects the annotated bean.
+Complexity: @PropertySource is simpler, while @ConfigurationProperties offers advanced features like nesting and validation.
+
+When to use which:
+Use @PropertySource for:
+loading simple properties used with @Value or environment variables.
+Specifying multiple configuration files.
+
+Use @ConfigurationProperties for:
+Binding complex configuration to "beans with nested structures."
+Enforcing data types and validation on configuration values.
+
+what is meant by beans with nested structures?
+beans with nested structures refer to objects that have properties which are also objects themselves.
+Here are some examples of beans with nested structures in Spring Boot:
+Order bean: Containing nested objects for Customer, ShippingAddress, and OrderItems (list of products).
+Employee bean: With nested objects for Department, Manager, and Skills (set of skill objects).
+Product bean: Having nested objects for Category, Specifications, and Reviews (list of review objects).

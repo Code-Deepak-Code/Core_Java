@@ -1,0 +1,22 @@
+@DataJpaTest
+What version of Junit5 you use.
+
+Which dependency you used?
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+@DataJpaTest:
+For unit testing data layer we have @DataJpaTest annotation, whcih acts like a testcontainers.
+That means, it will create the testimplementation of h2 database when the test execution begin and
+destroyes the h2 container at the end of test method.
+
+What version of Junit you use?
+Junit5 with AssertJ. 
+Using AssertJ makes the asserions much easier because of several handy method.
+
+Which dependency you used?
+springboot-starter-test
+it includes all the hamcrest, AssertJ, Junit5, Mockito etc.
+

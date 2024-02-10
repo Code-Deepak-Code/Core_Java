@@ -6,7 +6,11 @@ How to handle security in microservices?
 Using Keycloak
 
 Which rest client we use to cal microservices?
-RestTemplate
+RestTemplate in earlier version when I started few years back.
+But since last few years, I have been using Feing clienty.
+Advantage:
+1. It is used for calling another microservices.
+2. It is used to do load balancing using Ribbon.
 
 
 ** Which client you use to call the other microservices within your architecture and why.
