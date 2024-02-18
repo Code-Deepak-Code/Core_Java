@@ -1,0 +1,3 @@
+Collection trees
+Features and use cases of each and every collection
+Internal working of the popular collections such as 1. Hashmap 2. LinkedList
